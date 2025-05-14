@@ -1,0 +1,67 @@
+/* Reset & base */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; min-height:100%; background:#0c0d11; color:#ddd; font-family:'Roboto Slab', serif; overflow-y:auto; }
+
+/* Overlays */
+.overlay {
+  pointer-events:none;
+  position:fixed; inset:0; z-index:9999;
+}
+.noise {
+  background:url('static_noise_small.gif') repeat; opacity:0.05;
+}
+.scanlines {
+  background:linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 50%) repeat-y;
+  background-size:100% 3px; opacity:0.2;
+}
+
+/* Login Container */
+.login-container {
+  max-width:400px; margin:10% auto; padding:2rem;
+  background:rgba(12,13,17,0.85); border:2px solid #444;
+  text-align:center; animation: flicker 8s infinite;
+}
+.login-container h1 {
+  font-size:2.2rem; margin-bottom:1rem; color:#7fa;
+}
+.login-container .prompt {
+  margin-bottom:1rem; color:rgba(221,221,221,0.8);
+}
+.login-container input {
+  width:100%; padding:0.75rem; margin-bottom:1rem;
+  background:#1e1f23; border:1px solid #555; color:#eee; font-size:1rem;
+}
+.login-container button {
+  padding:0.75rem 1.5rem; background:#7fa; border:none; color:#0c0d11;
+  font-size:1rem; cursor:pointer; transition:background 0.3s;
+}
+.login-container button:hover {
+  background:#6ea;
+}
+.login-container .warning {
+  margin-top:1rem; font-size:0.85rem; color:#d55;
+}
+
+/* Mesh Content */
+.mesh-content {
+  max-width:700px; margin:5% auto; padding:2rem;
+}
+.mesh-content h2 {
+  font-size:1.8rem; margin-bottom:1rem; color:#7fa;
+}
+.streams .stream {
+  background:rgba(12,13,17,0.7); padding:1rem; margin-bottom:1rem;
+  border-left:4px solid #7fa;
+}
+.streams .stream h3 {
+  margin-bottom:0.5rem;
+}
+.streams .stream a {
+  color:#7fa; text-decoration:underline;
+}
+
+/* Flicker */
+@keyframes flicker {
+  0%,20%,40%,70%,100% { opacity:1;}
+  10%,30%,50%,60% { opacity:0.9;}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Celestial Mesh</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Overlays -->
+  <div class="overlay noise"></div>
+  <div class="overlay scanlines"></div>
+
+  <div class="login-container" id="login-container">
+    <h1>Celestial Mesh</h1>
+    <p class="prompt">Enter your token to access the classified streams:</p>
+    <form id="mesh-form">
+      <input type="text" id="token" placeholder="TOKEN HERE" required>
+      <button type="submit">ENTER MESH</button>
+    </form>
+    <p class="warning">All activity is monitored.</p>
+  </div>
+
+  <div class="mesh-content" id="mesh-content" style="display:none;">
+    <h2>Welcome, Seeker</h2>
+    <div class="streams" id="streams">
+      <!-- Streams will be injected here -->
+    </div>
+    <section class="navigation">
+      <p>Want more insight? <a href="ellom8wyd.github.io/seraphina" target="_blank">Read Seraphina’s Journal</a></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vault 47 – Restricted</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay noise"></div>
+  <div class="overlay scanlines"></div>
+
+  <div class="vault-container">
+    <h1>VAULT 47</h1>
+    <p class="status">STATUS: LOCKED</p>
+    <p class="instructions">Enter the **ECHO KEY** to decrypt the vault’s contents:</p>
+    <form id="vault-form">
+      <input type="password" id="vault-key" placeholder="ECHO KEY" required>
+      <button type="submit">UNLOCK</button>
+    </form>
+    <div class="vault-content" id="vault-content" style="display:none;">
+      <h2>Decrypted Archive</h2>
+      <ul>
+        <li><a href="mysteries/ancient_map.png">Ancient Mosaic Map</a></li>
+        <li><a href="logs/echo3.mp3">Echo Pattern Recording</a></li>
+        <li><a href="reports/byzantine_sources.pdf">Byzantine Source Dossier</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

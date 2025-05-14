@@ -1,0 +1,34 @@
+/* Base & overlays same as mesh */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; min-height:100%; background:#0d0e12; color:#ccc; font-family:'Roboto Mono', monospace; overflow-y:auto; }
+.overlay { pointer-events:none; position:fixed; inset:0; z-index:9999; }
+.noise { background:url('static_noise_small.gif') repeat; opacity:0.05; }
+.scanlines { background:linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.1) 50%) repeat-y; background-size:100%3px; opacity:0.2; }
+
+/* Vault container */
+.vault-container {
+  max-width:500px; margin:10% auto; padding:2rem;
+  background:rgba(13,14,18,0.9); border:2px solid #555;
+  animation: flicker 8s infinite;
+  text-align:center;
+}
+.vault-container h1 { font-size:2.5rem; color:#f55; }
+.status { margin:0.5rem 0; font-weight:bold; color:#f55; }
+.instructions { margin:1rem 0; color:#aaa; }
+.vault-container input {
+  width:100%; padding:0.75rem; margin-bottom:1rem;
+  background:#1a1c20; border:1px solid #555; color:#eee;
+}
+.vault-container button {
+  padding:0.75rem 1.5rem; background:#f55; border:none; color:#0d0e12;
+  cursor:pointer; transition:background 0.3s;
+}
+.vault-container button:hover { background:#d44; }
+.vault-content ul { list-style:none; text-align:left; margin-top:1rem; }
+.vault-content li { margin-bottom:0.5rem; }
+.vault-content a { color:#f55; text-decoration:underline; }
+
+/* Flicker */
+@keyframes flicker {
+  0%,20%,40%,70%,100%{opacity:1;}10%,30%,50%,60%{opacity:0.9;}
+}
